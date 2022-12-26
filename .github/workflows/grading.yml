@@ -15,6 +15,11 @@ jobs:
       - name: Grade exercise-exclude-files-from-secret-scanning activity
         id: events
         uses: "./.github/actions/local-action"
+      - name: Command Output
+        uses: mathiasvr/command-output@v1.1.0
+        with:
+          # Command to run
+          run: ls
 
       - name: Grading results
         uses: githubtraining/looking-glass-action@v1.0.0
